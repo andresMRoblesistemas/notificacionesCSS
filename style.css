@@ -30,16 +30,32 @@ body {
     animation: fadein 0.5s, fadeout 0.5s 2.5s;
   }
 
-  #progreso{
+  #informacion, #error, #confirmacion{
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     visibility: hidden;
     width: 0%;
   }
 
-  #progreso.mostrar{
+  #informacion.mostrar{
     visibility: visible;
     background-color: blue;
+    height: 5px;
+    width: 100%;
+    animation: progreso 1800ms;
+  }
+
+  #error.mostrar{
+    visibility: visible;
+    background-color: red;
+    height: 5px;
+    width: 100%;
+    animation: progreso 1800ms;
+  }
+
+  #confirmacion.mostrar{
+    visibility: visible;
+    background-color: green;
     height: 5px;
     width: 100%;
     animation: progreso 1800ms;

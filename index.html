@@ -15,9 +15,9 @@
             <div class="mensaje">
                 Codigo HTML de error
             </div>
-            <!-- <div id="progreso" style="background-color: red;"></div> -->
-            <div id="progreso" style="background-color: green;"></div>
-            <!-- <div id="progreso" style="background-color: blue;"></div> -->
+            <div id="informacion"></div>
+            <!-- <div id="error"></div> -->
+            <!-- <div id="confirmacion"></div> -->
         </div>
 
         <script>
@@ -25,7 +25,7 @@
             var x = document.getElementById("notificacion");
             x.classList.toggle('mostrar');
             setTimeout(function(){ x.className = x.className.replace("mostrar", ""); }, 3000);
-            var y = document.getElementById("progreso");
+            var y = document.getElementById("informacion");
             y.classList.toggle('mostrar');
             setTimeout(function(){ y.className = y.className.replace("mostrar", ""); }, 3000);
             }
