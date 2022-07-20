@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans');
+body {
+  font-family: 'Work Sans', sans-serif;
+}
+
+#notificacion {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(44, 44, 44);
+    text-align: center;
+    font-weight: 400;
+    border-radius: 7px;
+    box-shadow: #646464 1px 1px 5px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    top: 30px;
+  }
+
+  .mensaje{
+    margin: 10px;
+    padding: 10px;
+  }  
+
+  #notificacion.mostrar {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+
+  #progreso{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    visibility: hidden;
+    width: 0%;
+  }
+
+  #progreso.mostrar{
+    visibility: visible;
+    background-color: blue;
+    height: 5px;
+    width: 100%;
+    animation: progreso 1800ms;
+  }
+
+  @-webkit-keyframes progreso {
+    0%{width: 0%; }
+    90%{width: 100%; }
+  }
+
+  @keyframes progreso {
+    0%{ width: 0%; }
+    90%{width: 100%;}
+  }
+  
+  @-webkit-keyframes fadein {
+    from {top: 0; opacity: 0;}
+    to {top: 30px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {top: 0; opacity: 0;}
+    to {top: 30px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {top: 30px; opacity: 1;}
+    to {top: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {top: 30px; opacity: 1;}
+    to {top: 0; opacity: 0;}
+  }

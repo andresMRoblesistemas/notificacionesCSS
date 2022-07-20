@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CDM Notificaciones</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <button onclick="llamada()">Llamar notificacion</button>
+
+        <div id="notificacion">
+            <div class="mensaje">
+                Codigo HTML de error
+            </div>
+            <!-- <div id="progreso" style="background-color: red;"></div> -->
+            <div id="progreso" style="background-color: green;"></div>
+            <!-- <div id="progreso" style="background-color: blue;"></div> -->
+        </div>
+
+        <script>
+            function llamada() {
+            var x = document.getElementById("notificacion");
+            x.classList.toggle('mostrar');
+            setTimeout(function(){ x.className = x.className.replace("mostrar", ""); }, 3000);
+            var y = document.getElementById("progreso");
+            y.classList.toggle('mostrar');
+            setTimeout(function(){ y.className = y.className.replace("mostrar", ""); }, 3000);
+            }
+        </script>
+    </body>
+</html>
